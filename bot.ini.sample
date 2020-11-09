@@ -1,6 +1,7 @@
 [bot]
 last_pos_file = data/bot.last
 words_file = data/words.txt
+tweet_template = {} du slip
 
 [twitter]
 api_key = ###
