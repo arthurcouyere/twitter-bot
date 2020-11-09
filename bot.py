@@ -4,6 +4,7 @@ import zipfile
 from pathlib import Path
 from configparser import ConfigParser
 import tweepy
+from os import environ
 
 #################################
 # config
@@ -75,14 +76,9 @@ def main():
     words_file     = script_dir / Path(config["bot"]["words_file"])
     last_post_file = script_dir / Path(config["bot"]["last_pos_file"])
 
-    api_key             = config["twitter"]["api_key"]
-    api_secret_key      = config["twitter"]["api_secret_key"]
-    access_token        = config["twitter"]["access_token"]
-    access_token_secret = config["twitter"]["access_token_secret"]
-
     # twitter auth
-    auth = tweepy.OAuthHandler(api_key, api_secret_key)
-    auth.set_access_token(access_token, access_token_secret)
+    auth = tweepy.OAuthHandler(environ["CONSUMER_KEY"], environ["CONSUMER_SECRET"])
+    auth.set_access_token(environ["ACCESS_KEY"], environ["ACCESS_SECRET"])
 
     api = tweepy.API(auth)
 

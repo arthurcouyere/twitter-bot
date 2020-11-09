@@ -132,9 +132,6 @@ dmypy.json
 *.code-workspace
 .vscode/
 
-# conf
-*.ini
-
 # temp data
 data/*.last
 data/*.sql
