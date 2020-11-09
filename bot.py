@@ -91,8 +91,7 @@ def main():
     next_word = word_gen.get_next_word()
 
     # post tweet
-    # api.update_status(config["twitter"]["tweet_template"] % next_word)
-    print(tweet_template.format(next_word))
+    api.update_status(tweet_template.format(next_word))
 
     # save pos
     word_gen.save_last_pos()
