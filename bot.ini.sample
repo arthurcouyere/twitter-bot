@@ -1,0 +1,9 @@
+[bot]
+last_pos_file = data/bot.last
+words_file = data/words.txt
+
+[twitter]
+api_key = ###
+api_secret_key = ###
+access_token = ###
+access_token_secret = ###
