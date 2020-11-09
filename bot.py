@@ -10,7 +10,7 @@ import tweepy
 #################################
 
 # logging 
-logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
+# logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
 #################################
 # functions
@@ -34,7 +34,7 @@ class WordGenerator():
     def load_last_pos(self):
 
         if self.last_pos_file.is_file():
-            with open(self.last_pos_file, "r") as f_last_pos:
+            with open(str(self.last_pos_file), "r") as f_last_pos:
                 try:
                     last_pos = int(f_last_pos.read())
                 except:
@@ -49,11 +49,11 @@ class WordGenerator():
         return last_pos
 
     def save_last_pos(self):
-        with open(self.last_pos_file, "w") as f_last_pos:
-            f_last_pos.write("%s" % self.cur_pos)
+        with open(str(self.last_pos_file), "w") as f_last_pos:
+            f_last_pos.write(str(self.cur_pos))
 
     def get_next_word(self):
-        f = open(self.words_file, 'r', encoding='utf8')
+        f = open(str(self.words_file), 'r', encoding='utf8')
         logging.debug("reading text file %s" % f.name)
         for i, line in enumerate(f):
             if i == self.cur_pos:
