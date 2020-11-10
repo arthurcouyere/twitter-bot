@@ -4,11 +4,16 @@ Tweete les mots du slip de la langue française du slip. Largement inspiré par 
 
 Poste sur [@botduslip](https://twitter.com/botduslip).
 
+Stocke la position du dernier mot tweeté dans une base Redis.
+
+## Environnement de développement
+
 ### Pré-requis
 
-Installer Redis pour le stockage de dernier mot posté
+Installer Redis pour le stockage de dernier mot tweeté.
 
 ### Configuration
+
 Pour l'authentification Twitter, créer un fichier `.env` contenant les variables d'environnement suivantes :
 ```
 REDIS_URL=redis://localhost:6379/0
@@ -19,3 +24,27 @@ ACCESS_SECRET=###
 ```
 
 Le script charge automatiquement le fichier s'il est présent sauf si les variables d'environnement sont déjà définies
+
+## Déploiement en production
+
+Pour déployer l'application sur Heroku depuis Ubuntu, se placer dans le répertoire ou a été cloné le dépot git en lancer les commandes suivantes :
+
+```
+sudo snap install --classic heroku
+heroku login
+heroku apps:create botduslip
+heroku addons:create heroku-redis:hobby-dev -a botduslip
+git push heroku main
+heroku ps:scale clock=1
+```
+
+Pour voir les logs :
+```
+heroku logs --tail
+```
+
+Pour savoir quelle est la dernière position de mot dans la base Redis :
+```
+export REDIS_URL=$(heroku config | grep REDIS | awk '{print $2}')
+redis-cli -u $REDIS_URL get twitter-bot.last_pos
+```

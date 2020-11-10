@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # logging 
-# logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
+logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
 
 #################################
 # functions
@@ -92,7 +92,9 @@ def main():
     next_word = word_gen.get_next_word()
 
     # post tweet
-    api.update_status(tweet_template.format(next_word))
+    status = tweet_template.format(next_word)
+    logging.info("tweeting status [%s]" % status)
+    api.update_status(status)
 
     # save pos
     word_gen.save_last_pos()
