@@ -17,6 +17,6 @@ from bot import main
 
 # Create an instance of scheduler and add function.
 scheduler = BlockingScheduler()
-scheduler.add_job(main, "interval", minutes=15)
+scheduler.add_job(main, "interval", minutes=10)
 
 scheduler.start()
