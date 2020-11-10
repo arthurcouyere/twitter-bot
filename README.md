@@ -12,18 +12,22 @@ Stocke la position du dernier mot tweeté dans une base Redis.
 
 Installer Redis pour le stockage de dernier mot tweeté.
 
+Créer un compte twitter développeur et créer une application depuis https://developer.twitter.com/en/portal/projects-and-apps.
+
+Générer ensuite l'API key et le secret associé ainsi qu'un access token et le secret associé (voir configuration ci-dessous).
+
 ### Configuration
 
 Pour l'authentification Twitter, créer un fichier `.env` contenant les variables d'environnement suivantes :
 ```ini
 REDIS_URL=redis://localhost:6379/0
-CONSUMER_KEY=### A RECUPERER DEPUIS SON COMPTE TWITTER
-CONSUMER_SECRET=### 
-ACCESS_KEY=###
-ACCESS_SECRET=###
+CONSUMER_KEY=### API KEY
+CONSUMER_SECRET=### API KEY SECRET
+ACCESS_KEY=### ACCESS TOKEN
+ACCESS_SECRET=### ACCESS TOKEN SECRET
 ```
 
-Le script charge automatiquement le fichier s'il est présent sauf si les variables d'environnement sont déjà définies
+Le script charge automatiquement le fichier s'il est présent sauf si les variables d'environnement sont déjà définies (utilisation de python dotenv).
 
 ## Déploiement en production
 
