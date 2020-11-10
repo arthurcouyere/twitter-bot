@@ -15,7 +15,7 @@ Installer Redis pour le stockage de dernier mot tweeté.
 ### Configuration
 
 Pour l'authentification Twitter, créer un fichier `.env` contenant les variables d'environnement suivantes :
-```
+```ini
 REDIS_URL=redis://localhost:6379/0
 CONSUMER_KEY=### A RECUPERER DEPUIS SON COMPTE TWITTER
 CONSUMER_SECRET=### 
@@ -29,7 +29,7 @@ Le script charge automatiquement le fichier s'il est présent sauf si les variab
 
 Pour déployer l'application sur Heroku depuis Ubuntu, se placer dans le répertoire ou a été cloné le dépot git en lancer les commandes suivantes :
 
-```
+```bash
 sudo snap install --classic heroku
 heroku login
 heroku apps:create botduslip
@@ -39,12 +39,12 @@ heroku ps:scale clock=1
 ```
 
 Pour voir les logs :
-```
+```bash
 heroku logs --tail
 ```
 
 Pour savoir quelle est la dernière position de mot dans la base Redis :
-```
+```bash
 export REDIS_URL=$(heroku config | grep REDIS | awk '{print $2}')
 redis-cli -u $REDIS_URL get twitter-bot.last_pos
 ```
