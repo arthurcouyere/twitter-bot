@@ -13,14 +13,4 @@ ACCESS_KEY=###
 ACCESS_SECRET=###
 ```
 
-Pour charger le fichier :
-* Utiliser le script `load_env.sh` depuis un shell
-* Dans VSCode, ajouter les lignes suivantes au fichier `.vscode/launch.json` :
-
-```
-    "configurations": [
-        {
-            "envFile": "${workspaceFolder}/.env"
-        }
-    ]
-```
+Le script charge automatiquement le fichier s'il est présent sauf si les variables d'environnement sont déjà définies

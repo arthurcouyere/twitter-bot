@@ -5,10 +5,14 @@ from pathlib import Path
 from configparser import ConfigParser
 import tweepy
 from os import environ
+from dotenv import load_dotenv
 
 #################################
 # config
 #################################
+
+# load .env file
+load_dotenv()
 
 # logging 
 # logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
@@ -75,6 +79,9 @@ def main():
     script_dir = Path(__file__).resolve().parent
     words_file     = script_dir / Path(config["bot"]["words_file"])
     last_post_file = script_dir / Path(config["bot"]["last_pos_file"])
+
+    for env_var in ["CONSUMER_KEY", "CONSUMER_SECRET", "ACCESS_KEY", "ACCESS_SECRET"]:
+        logging.debug("%s=%s" % (env_var, environ[env_var]))
 
     # twitter auth
     auth = tweepy.OAuthHandler(environ["CONSUMER_KEY"], environ["CONSUMER_SECRET"])
