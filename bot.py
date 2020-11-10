@@ -1,9 +1,9 @@
-import sys
 import logging
-import zipfile
 from pathlib import Path
 from configparser import ConfigParser
+from redis import Redis
 import tweepy
+import redis
 from os import environ
 from dotenv import load_dotenv
 
@@ -21,6 +21,24 @@ load_dotenv()
 # functions
 #################################
 
+class Context():
+    last_pos_prop = "twitter-bot.last_pos"
+
+    def __init__(self, r: Redis) -> None:
+        self.r = r
+
+    def get_last_pos(self)-> int:
+        last_pos = self.r.get(self.last_pos_prop)
+        if last_pos == None:
+            last_pos = -1
+        else:
+            last_pos = int(last_pos.decode('utf8'))
+
+        return last_pos
+
+    def save_last_pos(self, last_pos: int) -> None:
+        self.r.set(self.last_pos_prop, last_pos)
+
 class WordGenerator():
     """
     Word generator : loads words from a text file and saves last word read
@@ -28,34 +46,15 @@ class WordGenerator():
     zip_txt_file = "words.txt"
     last_pos = 0
 
-    def __init__(self, words_file: Path, last_pos_file: Path):
-        
+    def __init__(self, words_file: Path, r: Redis) -> None:
+
+        self.context = Context(r)
+
         self.words_file = words_file
-        self.last_pos_file = last_pos_file
-
-        last_pos = self.load_last_pos()
-        self.cur_pos = last_pos + 1
-
-    def load_last_pos(self):
-
-        if self.last_pos_file.is_file():
-            with open(str(self.last_pos_file), "r") as f_last_pos:
-                try:
-                    last_pos = int(f_last_pos.read())
-                except:
-                    logging.debug("last pos is not an integer")
-                    last_pos = -1
-
-        else:
-            logging.debug("last pos file does not exists")
-            last_pos = -1
-        
-        logging.debug("last pos : %s" % last_pos)
-        return last_pos
+        self.cur_pos = self.context.get_last_pos() + 1
 
     def save_last_pos(self):
-        with open(str(self.last_pos_file), "w") as f_last_pos:
-            f_last_pos.write(str(self.cur_pos))
+        self.context.save_last_pos(self.cur_pos)
 
     def get_next_word(self):
         f = open(str(self.words_file), 'r', encoding='utf8')
@@ -78,10 +77,9 @@ def main():
 
     script_dir = Path(__file__).resolve().parent
     words_file     = script_dir / Path(config["bot"]["words_file"])
-    last_post_file = script_dir / Path(config["bot"]["last_pos_file"])
 
-    for env_var in ["CONSUMER_KEY", "CONSUMER_SECRET", "ACCESS_KEY", "ACCESS_SECRET"]:
-        logging.debug("%s=%s" % (env_var, environ[env_var]))
+    # redis connect
+    r = redis.from_url(environ["REDIS_URL"])
 
     # twitter auth
     auth = tweepy.OAuthHandler(environ["CONSUMER_KEY"], environ["CONSUMER_SECRET"])
@@ -90,7 +88,7 @@ def main():
     api = tweepy.API(auth)
 
     # get last tweeted word
-    word_gen = WordGenerator(words_file, last_post_file)
+    word_gen = WordGenerator(words_file, r)
     next_word = word_gen.get_next_word()
 
     # post tweet
