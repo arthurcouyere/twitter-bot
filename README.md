@@ -44,7 +44,7 @@ heroku ps:scale clock=1
 
 Pour voir les logs :
 ```bash
-heroku logs --tail
+heroku logs --tail --source app --dyno clock
 ```
 
 Pour savoir quelle est la dernière position de mot dans la base Redis :
