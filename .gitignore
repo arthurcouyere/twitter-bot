@@ -133,5 +133,6 @@ dmypy.json
 .vscode/
 
 # temp data
-data/*.last
-data/*.sql
+**/data/*.last
+**/data/*.sql
+**/data/*.csv
