@@ -17,6 +17,6 @@ logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
 
 # Create an instance of scheduler and add function.
 scheduler = BlockingScheduler()
-scheduler.add_job(main, "interval", minutes=10)
+scheduler.add_job(main, "interval", minutes=30)
 
 scheduler.start()
