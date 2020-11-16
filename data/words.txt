@@ -1,13 +1,10 @@
-a
-a capella
-a cappella
+﻿a cappella
 a contrario
 a fortiori
 a giorno
 a jeun
 a posteriori
 a priori
-aa
 ab absurdo
 ab initio
 ab ovo
@@ -1706,7 +1703,7 @@ ancestral
 ancestrale
 ancestralement
 ancestralité
-anch\'io son pittore
+anch'io son pittore
 anche
 anchilops
 anchois
@@ -3462,7 +3459,7 @@ augurer
 auguste
 augustin
 augustinien
-aujourd\'hui
+aujourd'hui
 aula
 aulique
 aulnaie
@@ -3920,10 +3917,10 @@ aïoli
 à giorno
 à glagla
 à jeun
-à l\'aveuglette
-à l\'encan
-à l\'envi
-à l\'improviste
+à l'aveuglette
+à l'encan
+à l'envi
+à l'improviste
 à la daumont
 à la saint-glinglin
 à leur encontre
@@ -3967,7 +3964,6 @@ aïoli
 âprement
 âpreté
 âtre
-b
 baba
 baballe
 babasse
@@ -4530,7 +4526,7 @@ bastringue
 basé
 basée
 bat-flanc
-bat-l\'eau
+bat-l'eau
 bataclan
 bataille
 batailler
@@ -4746,8 +4742,8 @@ berlurer
 berme
 bermuda
 bernache
-bernard-l\'ermite
-bernard-l\'hermite
+bernard-l'ermite
+bernard-l'hermite
 berne
 berner
 bernicle
@@ -4986,7 +4982,7 @@ bimensuelle
 bimestre
 bimoteur
 bimétallisme
-bin\'s
+bin's
 binaire
 biner
 binet-simon
@@ -5832,7 +5828,7 @@ boutiquier
 boutiquière
 boutoir
 bouton
-bouton-d\'or
+bouton-d'or
 bouton-pression
 boutonnage
 boutonnant
@@ -6596,8 +6592,8 @@ bûcheronner
 bûchette
 bûcheur
 bûcheuse
-c
-c\'est-à-dire
+c'est
+c'est-à-dire
 cab
 cabale
 cabaliste
@@ -7910,7 +7906,7 @@ cessez-le-feu
 cession
 cessionnaire
 ceste
-ch\'timi
+ch'timi
 cha-cha-cha
 chabanais
 chabichou
@@ -7994,7 +7990,7 @@ chamelle
 chamois
 chamoisine
 champ
-champ\'
+champ'
 champagne
 champenois
 champenoise
@@ -8192,7 +8188,7 @@ charybde
 chas
 chassant
 chasse
-chasse-d\'eau
+chasse-d'eau
 chasse-mouche
 chasse-mouches
 chasse-neige
@@ -8300,8 +8296,8 @@ cheese-cake
 cheeseburger
 chef
 chef-adjoint
-chef-d\'oeuvre
-chef-d\'oeuvres
+chef-d'oeuvre
+chef-d'oeuvres
 chef-lieu
 cheftaine
 cheik
@@ -9132,7 +9128,7 @@ climatisée
 climatologue
 climax
 clin
-clin-d\'oeil
+clin-d'oeil
 clinche
 clinicat
 clinicien
@@ -9651,7 +9647,7 @@ commando
 commandé
 commandée
 comme
-commedia dell\'arte
+commedia dell'arte
 commencement
 commencer
 commensal
@@ -10793,7 +10789,7 @@ copule
 copuler
 copyright
 coq
-coq-à-l\'âne
+coq-à-l'âne
 coquard
 coquart
 coque
@@ -12136,11 +12132,10 @@ côté
 ça
 çruti
 çà
-d
-d\'
-d\'abord
-d\'emblée
-d\'ores et déjà
+d'
+d'abord
+d'emblée
+d'ores et déjà
 da
 dab
 daba
@@ -13337,7 +13332,7 @@ doré
 dorée
 dorénavant
 dos
-dos-d\'âne
+dos-d'âne
 dosage
 dose
 doser
@@ -15425,7 +15420,6 @@ dôle
 dôme
 dû
 dûment
-e
 e-commerce
 e-mail
 east river
@@ -16419,12 +16413,12 @@ entourlouper
 entourloupette
 entouré
 entourée
-entr\'acte
-entr\'aimer
-entr\'apercevoir
-entr\'ouvert
-entr\'ouverte
-entr\'égorger
+entr'acte
+entr'aimer
+entr'apercevoir
+entr'ouvert
+entr'ouverte
+entr'égorger
 entracte
 entraide
 entraider
@@ -17485,7 +17479,6 @@ eye-liner
 eyeliner
 ère
 ève
-é
 ébahi
 ébahie
 ébahir
@@ -18800,7 +18793,6 @@ eyeliner
 éwé
 être
 être-là
-f
 fa
 fable
 fabliau
@@ -19565,7 +19557,7 @@ fissurer
 fiston
 fistule
 fitness
-five o\'clock
+five o'clock
 fivete
 fixage
 fixateur
@@ -20829,7 +20821,6 @@ fête-dieu
 fêter
 fût
 führer
-g
 gaba
 gabardine
 gabare
@@ -23217,7 +23208,7 @@ horripilation
 horripiler
 hors-bord
 hors-cote
-hors-d\'oeuvre
+hors-d'oeuvre
 hors-jeu
 hors-série
 horse-guard
@@ -23711,7 +23702,6 @@ hôtelier
 hôtelière
 hôtellerie
 hôtesse
-i
 i.e.
 iambe
 iambique
@@ -26085,7 +26075,6 @@ ixième
 îlette
 îlot
 îlotier
-j
 jabadao
 jabot
 jaboter
@@ -26230,9 +26219,9 @@ jazz-rock
 jazzman
 jazzy
 je
-je-m\'en-fichiste
-je-m\'en-foutisme
-je-m\'en-foutiste
+je-m'en-fichiste
+je-m'en-foutisme
+je-m'en-foutiste
 je-ne-sais-quoi
 jean
 jean-foutre
@@ -26513,7 +26502,6 @@ jésuite
 jésuitique
 jésuitière
 jésus
-k
 k-o
 k-way
 ka
@@ -26733,9 +26721,8 @@ kératinisée
 kératoplastie
 kératose
 kérosène
-l
-l\'
-l\'une
+l'
+l'une
 l-dopa
 la
 la plata
@@ -28057,7 +28044,7 @@ lézarde
 lézarder
 lézardé
 lézardée
-m\'as-tu-vu
+m'as-tu-vu
 ma
 ma-jong
 maboul
@@ -28254,7 +28241,7 @@ maillotin
 maillé
 main
 main-courante
-main-d\'oeuvre
+main-d'oeuvre
 main-forte
 mainate
 maincourantier
@@ -28433,8 +28420,8 @@ maléficier
 maléficié
 maléfique
 mam
-mam\'selle
-mam\'zelle
+mam'selle
+mam'zelle
 mamaliga
 mamamouchi
 maman
@@ -28949,7 +28936,7 @@ masturber
 mastère
 masure
 mat
-mat\'
+mat'
 matador
 mataf
 matamore
@@ -30220,7 +30207,7 @@ montant
 montante
 monte-charge
 monte-charges
-monte-en-l\'air
+monte-en-l'air
 monte-plat
 monte-plats
 monteur
@@ -31206,9 +31193,8 @@ mûrissant
 mûrissante
 mûrissement
 mûron
-n
-n\'
-n\'est-ce pas
+n'
+n'est-ce pas
 na
 nabab
 nabi
@@ -31621,7 +31607,7 @@ nière
 nié
 niébé
 niée
-no man\'s land
+no man's land
 nobiliaire
 nobilitas
 noblaillon
@@ -32106,7 +32092,6 @@ névrosé
 névrosée
 névrotique
 névé
-o
 oaristys
 oasis
 ob
@@ -34755,8 +34740,8 @@ pie-grièche
 pie-mère
 pied
 pied-bot
-pied-d\'alouette
-pied-d\'oeuvre
+pied-d'alouette
+pied-d'oeuvre
 pied-de-biche
 pied-de-poule
 pied-noir
@@ -34844,7 +34829,7 @@ pimpante
 pimpon
 pimprenelle
 pin
-pin\'s
+pin's
 pin-up
 pinacle
 pinacothèque
@@ -35745,7 +35730,7 @@ pongiste
 pongo
 pongé
 pont
-pont-l\'évêque
+pont-l'évêque
 pont-levis
 pont-neuf
 pont-promenade
@@ -36248,7 +36233,7 @@ prescience
 presciente
 prescription
 prescrire
-presqu\'île
+presqu'île
 presque
 press-book
 pressage
@@ -36807,7 +36792,7 @@ proèdre
 proéminence
 proéminent
 proéminente
-prud\'homme
+prud'homme
 prude
 prudemment
 prudence
@@ -37740,8 +37725,7 @@ pêché
 pêle-mêle
 pêne
 pôle
-q
-qu\'en-dira-t-on
+qu'en-dira-t-on
 quadra
 quadragénaire
 quadrangle
@@ -37914,7 +37898,7 @@ quetsche
 quette
 quetzal
 queue
-queue-d\'aronde
+queue-d'aronde
 queue-de-cheval
 queue-de-pie
 queursoir
@@ -39799,7 +39783,7 @@ rhume
 rhumerie
 rhyolite
 rhythm and blues
-rhythm\'n\'blues
+rhythm'n'blues
 rhénan
 rhénane
 rhéostat
@@ -40022,8 +40006,8 @@ rochet
 rocheuse
 rocheux
 rock
-rock\'n\'roll
-rock-\'n-roll
+rock'n'roll
+rock-'n-roll
 rocker
 rocket
 rockeur
@@ -41159,8 +41143,7 @@ rôtisserie
 rôtisseur
 rôtisseuse
 rôtissoire
-s
-s\'
+s'
 sa
 sabayon
 sabbat
@@ -44673,8 +44656,7 @@ sûr
 sûre
 sûrement
 sûreté
-t
-t\'
+t'
 t-shirt
 tab
 tabac
@@ -44903,7 +44885,7 @@ tapant
 tapante
 tape
 tape-cul
-tape-à-l\'oeil
+tape-à-l'oeil
 tapecul
 tapement
 tapenade
@@ -45535,7 +45517,7 @@ tire-au-flanc
 tire-botte
 tire-bouchon
 tire-bouton
-tire-d\'aile
+tire-d'aile
 tire-fesse
 tire-jus
 tire-laine
@@ -45942,7 +45924,7 @@ tout-petit
 tout-puissant
 tout-terrain
 tout-venant
-tout-à-l\'égout
+tout-à-l'égout
 tout-étoile
 toute
 toute-puissance
@@ -46576,7 +46558,7 @@ trombone
 tromboniste
 trommel
 trompe
-trompe-l\'oeil
+trompe-l'oeil
 tromper
 tromperie
 trompeter
@@ -47098,7 +47080,6 @@ tôlier
 tôlière
 tôt
 tôt-fait
-u
 ubac
 ubique
 ubiquiste
@@ -47318,7 +47299,6 @@ utérin
 utérine
 utérus
 uxorilocal
-v
 va
 va-et-vient
 va-tout
@@ -47556,7 +47536,7 @@ vaticanesque
 vaticination
 vaticiner
 vau
-vau-l\'eau
+vau-l'eau
 vauclusien
 vaudeville
 vaudevillesque
@@ -48535,7 +48515,6 @@ vêtir
 vêtu
 vêtue
 vêture
-w
 wagnérien
 wagnérienne
 wagon
@@ -48623,7 +48602,6 @@ xénophobie
 xérographie
 xérographique
 xérès
-y
 ya
 yacht
 yacht-club
@@ -48678,7 +48656,6 @@ yuppie
 yé-yé
 yéti
 yéyé
-z
 zaibatsu
 zain
 zakouski
