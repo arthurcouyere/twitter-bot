@@ -26,6 +26,7 @@ def main():
     parser = argparse.ArgumentParser(description='list tweets from Twitter API')
     parser.add_argument('-v', '--verbose',  action='store_true', help="verbose mode")
     parser.add_argument('-f', '--from-date', help="get tweets after date")
+    parser.add_argument('-u', '--username', help="get tweets of userame instead of current user")
     args = parser.parse_args()
     logging.debug(args)
     
@@ -34,7 +35,11 @@ def main():
     auth.set_access_token(environ["ACCESS_KEY"], environ["ACCESS_SECRET"])
     api = tweepy.API(auth)
 
-    user = api.me()
+    if args.username:
+        user = api.get_user(args.username)
+    else:
+        user = api.me()
+
     logging.info("current user: {1} [{0}]".format(user.id, user.screen_name))
 
     # init
@@ -47,7 +52,7 @@ def main():
     tqdm_disabled = (args.verbose == True)
 
     # loop on statuses
-    status_cursor = tweepy.Cursor(api.user_timeline).items()
+    status_cursor = tweepy.Cursor(api.user_timeline, id=user.id).items()
     for status in tqdm(status_cursor, total=user.statuses_count, desc="Loading tweets", disable=tqdm_disabled):
         if date_bound == None or (date_bound !=None and status.created_at  > date_bound):
             if args.verbose:
@@ -58,8 +63,10 @@ def main():
             last_status = status
 
     logging.info("tweets found: #{0}".format(nb_status))
-    logging.info("first status: [{1}] [{0}] [{2}] ".format(first_status.id, first_status.created_at, first_status.text))
-    logging.info("last  status: [{1}] [{0}] [{2}] ".format(last_status.id, last_status.created_at, last_status.text))
+    if first_status:
+        logging.info("first status: [{1}] [{0}] [{2}] ".format(first_status.id, first_status.created_at, first_status.text))
+    if last_status:
+        logging.info("last  status: [{1}] [{0}] [{2}] ".format(last_status.id, last_status.created_at, last_status.text))
 
 if __name__ == "__main__":
     main()
