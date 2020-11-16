@@ -27,6 +27,7 @@ def main():
     parser.add_argument('-v', '--verbose',  action='store_true', help="verbose mode")
     parser.add_argument('-f', '--from-date', help="get tweets after date")
     parser.add_argument('-u', '--username', help="get tweets of userame instead of current user")
+    parser.add_argument('-d', '--delete',  action='store_true', help="list and delete tweets")
     args = parser.parse_args()
     logging.debug(args)
     
@@ -53,16 +54,26 @@ def main():
 
     # loop on statuses
     status_cursor = tweepy.Cursor(api.user_timeline, id=user.id).items()
-    for status in tqdm(status_cursor, total=user.statuses_count, desc="Loading tweets", disable=tqdm_disabled):
+    message = "deleting tweets" if args.delete else "loading tweets"
+    for status in tqdm(status_cursor, total=user.statuses_count, desc=message, disable=tqdm_disabled):
         if date_bound == None or (date_bound !=None and status.created_at  > date_bound):
+            
             if args.verbose:
                 logging.info("[{1}] [{0}] [{2}] ".format(status.id, status.created_at, status.text))
+            
             nb_status += 1
+            
             if first_status == None:
                 first_status = status
             last_status = status
 
-    logging.info("tweets found: #{0}".format(nb_status))
+            if args.delete:
+                api.destroy_status(status.id)
+                if args.verbose:
+                    logging.info("deleting tweet [{1}] [{0}] [{2}] ".format(status.id, status.created_at, status.text))
+
+    message = "tweets found and deleted" if args.delete else "tweets found"
+    logging.info("{0}: #{1}".format(message, nb_status))
     if first_status:
         logging.info("first status: [{1}] [{0}] [{2}] ".format(first_status.id, first_status.created_at, first_status.text))
     if last_status:
