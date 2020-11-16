@@ -29,12 +29,21 @@ ACCESS_SECRET=### ACCESS TOKEN SECRET
 
 Le script charge automatiquement le fichier s'il est présent sauf si les variables d'environnement sont déjà définies (utilisation de python dotenv).
 
-## Déploiement en production
+## Environnement de production
 
-Pour déployer l'application sur Heroku depuis Ubuntu, se placer dans le répertoire ou a été cloné le dépot git en lancer les commandes suivantes :
+### Pré-requis
+
+Installer le package heroku
 
 ```bash
 sudo snap install --classic heroku
+```
+
+### Déploiement initial
+
+Pour déployer la 1ère fois l'application sur Heroku depuis Ubuntu, se placer dans le répertoire ou a été cloné le dépot git et lancer les commandes suivantes :
+
+```bash
 heroku login
 heroku apps:create botduslip
 heroku addons:create heroku-redis:hobby-dev -a botduslip
@@ -51,4 +60,13 @@ Pour savoir quelle est la dernière position de mot dans la base Redis :
 ```bash
 export REDIS_URL=$(heroku config | grep REDIS | awk '{print $2}')
 redis-cli -u $REDIS_URL get twitter-bot.last_pos
+```
+
+### Déploiements suivants
+
+Pour mettre à jour l'application sur Heroku :
+```bash
+heroku ps:scale clock=0
+git push heroku main
+heroku ps:scale clock=1
 ```
