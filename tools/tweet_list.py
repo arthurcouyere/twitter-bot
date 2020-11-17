@@ -1,7 +1,7 @@
 import argparse
 import logging
 import tweepy
-from datetime import datetime
+import dateparser
 from os import environ
 from dotenv import load_dotenv
 from tqdm import tqdm
@@ -46,7 +46,7 @@ def main():
     # init
     nb_status = 0
     if args.from_date:
-        date_bound = datetime.strptime(args.from_date, "%Y-%m-%d %H:%M:%S")
+        date_bound = dateparser.parse(args.from_date)
     else:
         date_bound = None
     first_status = last_status = None
