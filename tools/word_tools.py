@@ -9,6 +9,11 @@ import mlconjug3
 # config
 #################################
 
+verbs_file = "data/verbs.txt"
+nouns_file = "data/nouns.txt"
+words_file = "../data/words.txt"
+output_file = "../data/words_filtered.txt"
+
 # logging 
 logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
 
@@ -59,13 +64,13 @@ def main():
 
     # load verbs
     print("loading verbs")
-    verbs_file = script_dir / Path("data/verbs.txt")
+    verbs_file = script_dir / Path(verbs_file)
     with open(str(verbs_file), "r") as f:
         verbs = [line.rstrip() for line in f]
 
     # load nouns
     print("loading nouns")
-    nouns_file = script_dir / Path("data/nouns.txt")
+    nouns_file = script_dir / Path(nouns_file)
     with open(str(nouns_file), "r") as f:
         nouns = [line.rstrip() for line in f]
 
@@ -87,14 +92,14 @@ def main():
 
     # load words
     print("loading words")
-    words_file = script_dir / Path("../data/words.txt")
+    words_file = script_dir / Path(words_file)
     with open(str(words_file), "r") as f:
         words = [line.rstrip() for line in f]
         
     # process words
     print("filtering words")
     words_filtered = []
-    words_filtered_file = script_dir / Path("../data/words_filtered.txt")
+    words_filtered_file = script_dir / Path(output_file)
     with open(str(words_filtered_file), "w") as f:
         for word in tqdm(words):
             if (word not in conjugated_verbs) or (word in nouns):

@@ -11,6 +11,8 @@ from dotenv import load_dotenv
 # config
 #################################
 
+config_file = "bot.ini"
+
 # load .env file
 load_dotenv()
 
@@ -71,7 +73,7 @@ def main():
 
     # config
     config = ConfigParser()
-    config.read('bot.ini')
+    config.read(config_file)
 
     tweet_template =config["bot"]["tweet_template"]
 
