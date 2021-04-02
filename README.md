@@ -58,7 +58,7 @@ heroku logs --tail --source app --dyno clock
 
 Pour savoir quelle est la dernière position de mot dans la base Redis :
 ```bash
-export REDIS_URL=$(heroku config | grep REDIS_URL | awk '{print $2}')
+export REDIS_URL=$(heroku config -a botduslip | grep REDIS_URL | awk '{print $2}')
 redis-cli -u $REDIS_URL get twitter-bot.last_pos
 ```
 
